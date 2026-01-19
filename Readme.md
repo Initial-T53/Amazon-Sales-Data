@@ -1,5 +1,5 @@
 # Amazon Sales Data Readme
-- conda (amazon)
+
 # Objective:
 Segement e-commerce customers into distinct behavioral groups to support targeted marketing, personalization and retition strategies.
 

@@ -10,8 +10,9 @@ Goal: Identify customer groups based purely on what and how they buy, regardless
 
 Value (Behavioral):
 - Target Promotions
-- Identify Churn-Risk Customers
-- Improve loyalty programs
+- Early Identification of churn-risk customers
+- Improve loyalty and retention programs
+- More personalized customer experiences.
 
 2: Seasonality-aware clustering (monthly purchasing patterns)
 
@@ -22,8 +23,8 @@ Value (Temporal):
 - Inventory forecasting
 - Timing promotions correctly
 
-
-Deliverables:
+Note:
+Due to data quality limitations in the provided dataset, seasonality clustering (#2) could not be completed. The methodology is outlined, but results are not included.
 
 
 # Dataset Description
@@ -32,7 +33,36 @@ Deliverables:
 
 # Methodology/ Workflow overview
 - EDA
+* Data Cleaning
+* Missing value handling
+* Outlier detection
+* Initial distribution analysis
 
+- Customer-Level Feature Engineering
+* Aggregated order-level data to customer-level
+*  Created Behavioral metric:
+  *  Total spend
+  *  Order count  
+  *  Average order value
+  *  Average discount rate
+  *  Average quantity
+  *  sunk cost
+
+- Clustering Approaches
+* KMeans for full-cverage segmentation
+* HDBSCAN for density-based, behavior-driven segementation
+* PCA visualization for interpretability
+* Cluster summaries and persona definitions
+
+- Interpretation & Recommendations
+* Behavioral personas for each cluster
+* Marketing and retention strategies tailored to each group
+* Identification of noise cluster (HDBSCAN) and guidance on handling unclustered customers.
+
+- Seasonality Feature Engineering (Attempted)
+* Monthly order percentages
+* Seasonality vectors
+* Not completed due to data quality issues
 
 # Repository breakdown
 Amazon-Sales-Data
@@ -45,3 +75,9 @@ Amazon-Sales-Data
 # How to run dependencies
 pip install-r requirements.txt
 run notebooks
+
+
+# Limitations
+- Inconsistent and incomplete data fields prevented reliable month-level seasonality analysis.
+- Seasonality-aware clustering is not included in the final results
+- Behavior Clustering had to manually correct sythetic data

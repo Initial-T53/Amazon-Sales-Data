@@ -1,7 +1,7 @@
 # Amazon Sales Data Readme
 
 # Objective:
-Segement e-commerce customers into distinct behavioral groups to support targeted marketing, personalization and retition strategies.
+Segment e-commerce customers into distinct behavioral groups to support targeted marketing, personalization and retention strategies.
 
 Clustering will be performed in two ways:
 1: Purchase-behavior clustering (overall behavior, ignoring time)
@@ -49,8 +49,8 @@ Due to data quality limitations in the provided dataset, seasonality clustering 
   *  sunk cost
 
 - Clustering Approaches
-* KMeans for full-cverage segmentation
-* HDBSCAN for density-based, behavior-driven segementation
+* KMeans for full-coverage segmentation
+* HDBSCAN for density-based, behavior-driven segmentation
 * PCA visualization for interpretability
 * Cluster summaries and persona definitions
 
@@ -80,4 +80,4 @@ run notebooks
 # Limitations
 - Inconsistent and incomplete data fields prevented reliable month-level seasonality analysis.
 - Seasonality-aware clustering is not included in the final results
-- Behavior Clustering had to manually correct sythetic data
+- Behavior Clustering had to manually correct synthetic data
